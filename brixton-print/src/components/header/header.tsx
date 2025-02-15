@@ -1,31 +1,29 @@
-import { Box, Flex, Heading, Button } from "@chakra-ui/react";
-import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
+"use client";
+import { Box, Flex, Heading, Button, Grid, Link } from "@chakra-ui/react";
+import NextLink from "next/link";
+import NavLink from "@/components/navLink/navLink";
+import LinkButton from "@/components/linkButton/linkButton";
 
 const Header = () => {
   return (
-    <Box px={4} py={3}>
-      <Flex align="center" justify="space-between">
-        <Heading size="md">
-          <Link href="/">Brixton Print</Link>
+    <Box bg="brand.50" px={8} py={3}>
+      <Grid alignItems="center" templateColumns="1fr 2fr 1fr">
+        <Flex align="center">
+          <NavLink href="/products" text="Products" />
+          <NavLink href="/about" text="About" />
+          <NavLink href="/contact" text="Contact" />
+        </Flex>
+
+        <Heading size="lg" justifySelf="center">
+          <Link as={NextLink} href="/">
+            Brixton Print
+          </Link>
         </Heading>
 
-        <Flex align="center">
-          <Link href="/about">
-            <Button variant="plain" color="white" mx={2}>
-              About
-            </Button>
-          </Link>
-          <Link href="/contact">
-            <Button variant="plain" color="white" mx={2}>
-              Contact
-            </Button>
-          </Link>
-          <Button colorScheme="teal" ml={4}>
-            Get Started
-          </Button>
+        <Flex align="center" justifySelf="right">
+          <LinkButton href="/products" text="Order Now" variant="ghost" />
         </Flex>
-      </Flex>
+      </Grid>
     </Box>
   );
 };

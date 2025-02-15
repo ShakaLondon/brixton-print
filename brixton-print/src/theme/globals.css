@@ -19,7 +19,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +38,11 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+@font-face {
+  font-family: "NotoSansSemiCondensed";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap");
+  font-weight: normal;
+  font-style: normal;
 }

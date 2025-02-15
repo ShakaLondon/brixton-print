@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@theme/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import MainLayout from "@/layout/main-layout";
 import theme from "../theme/theme";
