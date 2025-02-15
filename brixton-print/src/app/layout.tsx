@@ -1,6 +1,7 @@
 import "./globals.css";
-import { Provider as ChakraProvider } from "@chakraui/provider";
+import { ChakraProvider } from "@chakra-ui/react";
 import MainLayout from "@/layout/main-layout";
+import theme from "../theme/theme";
 
 export default function RootLayout({
   children,
@@ -10,7 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ChakraProvider>
+        <ChakraProvider theme={theme}>
           <MainLayout>{children}</MainLayout>
         </ChakraProvider>
       </body>
