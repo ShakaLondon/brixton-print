@@ -3,28 +3,24 @@ import {
   Button,
   Link as ChakraLink,
   LinkProps as ChakraLinkProps,
+  ConditionalValue,
 } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
-import { FC } from "react";
 
 import styles from "./navLink.module.css";
 
 type NavLinkProps = ChakraLinkProps & {
   href: string;
   text: string;
-  variant?: string;
+  variant?: ConditionalValue<
+    "outline" | "link" | "solid" | "active" | "ghost" | undefined
+  >;
 };
 
-const Link: FC<NavLinkProps> = ({
-  href,
-  text,
-  variant,
-  children,
-  ...props
-}) => {
+const Link = ({ href, text, variant, children, ...props }: NavLinkProps) => {
   return (
     <ChakraLink as={NextLink} href={href} {...props}>
-      <Button variant={variant ?? "link"} px={4}>
+      <Button variant={variant ?? "link"} marginInline={4} paddingInline={4}>
         {text}
       </Button>
     </ChakraLink>
