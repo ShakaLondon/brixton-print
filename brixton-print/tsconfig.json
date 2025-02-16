@@ -22,7 +22,8 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@layout/*": ["./src/layout/*"],
-      "@theme/*": ["./src/theme/*"]
+      "@theme/*": ["./src/theme/*"],
+      "@chakraui/*": ["./src/components/chakraui/*"]
     }
   },
   "include": [
