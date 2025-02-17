@@ -1,11 +1,10 @@
 import { defineGlobalStyles } from "@chakra-ui/react";
-import { notoMono } from "./fonts";
 
 const globalStyles = defineGlobalStyles({
   body: {
-    background: "brand.50",
+    bg: "brand.200",
     color: "brand.800",
-    fontFamily: notoMono.style.fontFamily,
+    // px: 8,
   },
   h1: {
     color: "brand.800",
