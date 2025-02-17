@@ -9,8 +9,6 @@ import {
 } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 
-import styles from "./navLink.module.css";
-
 type NavLinkProps = ChakraLinkProps & {
   href: string;
   text: string;
@@ -25,9 +23,7 @@ const NavLink = ({ href, text, variant, children, ...props }: NavLinkProps) => {
 
   return (
     <ChakraLink as={NextLink} href={href} {...props}>
-      <Button variant={isActive ? "active" : "link"} paddingInline={4}>
-        {text}
-      </Button>
+      <Button variant={isActive ? "active" : "link"}>{text}</Button>
     </ChakraLink>
   );
 };
