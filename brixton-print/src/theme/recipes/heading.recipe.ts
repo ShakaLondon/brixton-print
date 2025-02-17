@@ -4,24 +4,28 @@ const headingRecipe = defineRecipe({
   base: {
     color: "brand.800",
     fontFamily: "NotoSansSemiCondensed, sans-serif",
-    fontWeight: "500",
+    fontWeight: "600",
+    mt: {
+      md: 0,
+      sm: 6,
+    },
   },
   variants: {
     size: {
       sm: {
         fontSize: "8px",
-        paddingInline: 4,
-        paddingBlock: 2,
+        px: 4,
+        py: 2,
       },
       md: {
-        fontSize: "16px",
-        paddingInline: 6,
-        paddingBlock: 3,
+        fontSize: "24px",
+        px: 6,
+        py: 3,
       },
       lg: {
-        fontSize: "26px",
-        paddingInline: 6,
-        paddingBlock: 3,
+        fontSize: "32px",
+        px: 6,
+        py: 3,
       },
     },
   },

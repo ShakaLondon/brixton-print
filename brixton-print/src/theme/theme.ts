@@ -6,11 +6,13 @@ import {
   defaultBaseConfig,
   defaultConfig,
   mergeConfigs,
+  defineGlobalStyles,
 } from "@chakra-ui/react";
-import { globalCss } from "../../theme/global-css";
-import buttonRecipe from "./recipes/button.recipe";
-import headingRecipe from "./recipes/heading.recipe";
-import linkRecipe from "./recipes/link.recipe";
+import globalStyles from "@theme/globals";
+import globalCss from "@theme/globals";
+import buttonRecipe from "@theme/recipes/button.recipe";
+import headingRecipe from "@theme/recipes/heading.recipe";
+import linkRecipe from "@theme/recipes/link.recipe";
 
 const customConfig = defineConfig({
   cssVarsRoot: ":where(:root, :host)",
@@ -44,19 +46,9 @@ const customConfig = defineConfig({
         },
       },
       link: linkRecipe,
-      globalCss,
     },
   },
-
-  // Box: {
-  //   baseStyle: {
-  //     bg: "brand.50",
-  //   },
-  // },
-  // fonts: {
-  //   heading: notoMono.style.fontFamily,
-  //   body: poppins.style.fontFamily,
-  // },
+  globalCss: globalStyles,
 });
 
 export default createSystem(defaultConfig, customConfig);
