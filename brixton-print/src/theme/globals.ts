@@ -6,6 +6,12 @@ const globalStyles = defineGlobalStyles({
     color: "brand.800",
     // px: 8,
   },
+  form: {
+    width: "full",
+  },
+  main: {
+    marginTop: { base: "4rem", sm: "8rem", md: "6rem" },
+  },
   h1: {
     color: "brand.800",
   },

@@ -7,12 +7,15 @@ import {
   defaultConfig,
   mergeConfigs,
   defineGlobalStyles,
+  CardTitle,
 } from "@chakra-ui/react";
 import globalStyles from "@theme/globals";
 import globalCss from "@theme/globals";
 import buttonRecipe from "@theme/recipes/button.recipe";
 import headingRecipe from "@theme/recipes/heading.recipe";
 import linkRecipe from "@theme/recipes/link.recipe";
+import textRecipe from "./recipes/text.recipe";
+import cardRecipe from "./recipes/card.recipe";
 
 const customConfig = defineConfig({
   cssVarsRoot: ":where(:root, :host)",
@@ -40,13 +43,10 @@ const customConfig = defineConfig({
     recipes: {
       button: buttonRecipe,
       heading: headingRecipe,
-      text: {
-        base: {
-          color: "brand.700",
-        },
-      },
+      text: textRecipe,
       link: linkRecipe,
     },
+    slotRecipes: { card: cardRecipe },
   },
   globalCss: globalStyles,
 });

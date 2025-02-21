@@ -2,10 +2,10 @@ import { defineRecipe } from "@chakra-ui/react";
 
 const buttonRecipe = defineRecipe({
   base: {
-    pe: {
-      base: 4,
-      sm: 0,
-    },
+    // pe: {
+    //   base: 4,
+    //   sm: 0,
+    // },
     ps: {
       base: 0,
       sm: 4,
@@ -26,15 +26,15 @@ const buttonRecipe = defineRecipe({
       },
       link: {
         pe: {
-          base: 8,
-          md: 6,
+          base: 4,
+          md: 4,
           sm: 4,
-          xs: 4,
+          xs: 2,
         },
         ps: {
           base: 0,
           md: 0,
-          sm: 4,
+          sm: 0,
           xs: 4,
         },
         color: "brand.600",
@@ -44,19 +44,21 @@ const buttonRecipe = defineRecipe({
         _hover: {
           textDecoration: "underline",
           fontWeight: 600,
+          bg: "none",
         },
+        height: "1.5rem",
       },
       active: {
         pe: {
-          base: 8,
-          md: 6,
+          base: 4,
+          md: 4,
           sm: 4,
-          xs: 4,
+          xs: 2,
         },
         ps: {
           base: 0,
           md: 0,
-          sm: 4,
+          sm: 0,
           xs: 4,
         },
         color: "brand.600",
@@ -64,6 +66,12 @@ const buttonRecipe = defineRecipe({
         textUnderlineOffset: "8px",
         bg: "none",
         textDecoration: "underline",
+        height: "1.5rem",
+        _hover: {
+          textDecoration: "underline",
+          fontWeight: 600,
+          bg: "none",
+        },
       },
       ghost: {
         bg: "brand.800",
