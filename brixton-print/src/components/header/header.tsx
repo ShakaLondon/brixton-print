@@ -16,7 +16,7 @@ const Header = () => {
     <Container
       px={8}
       mx={0}
-      height={{ base: "6rem", sm: "unset" }}
+      height={{ base: "6rem", sm: "2rem" }}
       alignContent="center"
       pos={{ md: "fixed", base: "relative" }}
       minWidth="100%"
@@ -44,7 +44,7 @@ const Header = () => {
         </GridItem>
 
         <GridItem alignContent="center" order={{ base: 1, md: 2 }}>
-          <Heading size="lg" justifySelf="center">
+          <Heading visual="one" justifySelf="center" letterSpacing="wide">
             <Link as={NextLink} href="/">
               Brixton Print
             </Link>
