@@ -23,7 +23,7 @@ const ContactForm = () => {
   const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
-    <Box width="80%">
+    <Box width="80%" display="flex">
       <form onSubmit={onSubmit}>
         <HStack gap="5" width="full" alignItems="flex-start">
           <FloatingField
@@ -62,9 +62,11 @@ const ContactForm = () => {
           register={register}
           invalid={!!errors.subject}
         />
-        <Button variant="ghost" px={4} mt={4}>
-          Submit
-        </Button>
+        <HStack gap="5" width="full" justifyContent="flex-end">
+          <Button visual="ghost" px={4} mt={4} alignContent="flex-end">
+            Submit
+          </Button>
+        </HStack>
       </form>
     </Box>
   );
